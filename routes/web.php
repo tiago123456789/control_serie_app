@@ -25,3 +25,9 @@ Route::prefix("series")
         Route::post("/{id}/edit", "SerieController@update")->name("season.update");
         Route::get("/{serieId}/seasons", "SeasonController@index")->name("season");
     });
+
+Route::get("/seasons/{serieId}/episodes", "SeasonController@findAllEpisodesBySeasonId")
+    ->name("season.episodes");
+
+Route::post("/seasons/{serieId}/episodes/watched", "EpisodeController@markWatched")
+    ->name("season.episodes.watched");

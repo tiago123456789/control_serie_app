@@ -22,7 +22,12 @@
             @else
                 @foreach($seasons as $key => $season)
                     <tr>
-                        <td>Season {{$season["number"]}}</td>
+                        <td>
+                            <a href="{{route("season.episodes", $season["id"])}}" style="text-decoration: none">
+                                Season {{$season["number"]}}
+                            </a>
+                            &nbsp;<span class="badge badge-secondary">{{$season->episodes()->count()}}</span>
+                        </td>
                     </tr>
                 @endforeach
             @endif

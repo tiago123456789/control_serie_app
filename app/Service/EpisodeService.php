@@ -16,6 +16,16 @@ class EpisodeService
         $this->repository = $repository;
     }
 
+    public function markWatched(array $ids)
+    {
+        $this->repository->markWatched($ids);
+    }
+
+    public function findAllBySeasonId($seasonId)
+    {
+        return $this->repository->findAllBySeasonId($seasonId);
+    }
+
     public function findAll()
     {
         return $this->repository->findAll();
