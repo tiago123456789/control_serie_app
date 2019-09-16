@@ -13,4 +13,9 @@ class Serie extends Model
     protected $hidden = [
         "created_at", "updated_at"
     ];
+
+    public function seasons()
+    {
+        return $this->hasMany(Season::class);
+    }
 }

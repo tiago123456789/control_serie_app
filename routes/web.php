@@ -22,4 +22,6 @@ Route::prefix("series")
         Route::get("/new", "SerieController@create")->name("serie.new");
         Route::post("/new", "SerieController@store")->name("serie.new");
         Route::delete("/{id}", "SerieController@remove")->name("serie.delete");
+        Route::post("/{id}/edit", "SerieController@update")->name("season.update");
+        Route::get("/{serieId}/seasons", "SeasonController@index")->name("season");
     });

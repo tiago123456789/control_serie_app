@@ -15,6 +15,19 @@
             </div>
 
             <div class="form-group">
+                <label for="number_season">Number season:</label>
+                <input type="number" value="1" name="number_season"
+                       id="number_season" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="number_episode">Number episode:</label>
+                <input type="number" value="1" name="number_episode"
+                       id="number_episode" class="form-control" />
+            </div>
+
+
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
